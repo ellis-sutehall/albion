@@ -1,0 +1,222 @@
+html {
+  box-sizing: border-box;
+}
+div#contact {
+  padding: 2rem 0;
+  background-color: $mid-blue;
+}
+span.confirm {
+  display: none;
+}
+div#about {
+  min-height: 43.750em;
+  // padding: 0 0 2rem 0;
+  background-color: $light-blue;
+// background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2357b0ff' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+}
+// Hero
+.hero-box {
+  margin-top: 6.250rem;
+  padding: .5rem;
+  // border: 2px solid $dark-blue;
+  // background-color: rgba(255, 255, 255, .5);
+  text-align: center;
+  .button {
+    // width: 70%;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 3px;
+  }
+  img {
+    margin-bottom: 2rem;
+  }
+  h5 {
+    color: white;
+    font-size:1.4rem;
+    // margin: 0 0 2rem 0;
+  }
+}
+// Thank You Page
+body .thank-you {
+  height: 100vh;
+}
+// Navigation
+.top-bar, .title-bar, .top-bar ul {
+  background-color: #2c3840;
+  padding: 0;
+}
+.top-bar-right h6 {
+  color: white;
+  letter-spacing: 2px;
+  // text-transform: uppercase;
+  padding-top: 3px;
+}
+.top-bar-title {
+  padding: 0;
+  a {
+    padding: 15px;
+    display: block;
+    &:hover {
+      background-color: $medium-gray;
+    }
+  }
+}
+.top-bar {
+  text-align: center;
+  .top-bar-title {
+    float: none;
+  }
+}
+.menu {
+  a.active {
+    background-color: $mid-blue;
+  }
+  li {
+    a {
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 90%;
+      &:hover {
+        background-color: $medium-gray;
+      }
+    }
+  }
+}
+.menu-icon::after {
+  background: white!important;
+}
+.menu-icon:hover::after {
+  background: white!important;
+  box-shadow: 0 7px 0 #fefefe, 0 14px 0 #fefefe;
+}
+//  Tablet Nav Fix
+@media screen and (max-width: 63.9375em) {
+  ul.menu > li {
+    // display: table-cell;
+  }
+}
+// Orbit
+li.orbit-slide, .hero {
+  background-size: cover;
+  height: calc( 100vh - 133px );
+}
+@include breakpoint( medium down ) {
+  .title-bar {
+    padding: 0.5rem;
+  }
+  li.orbit-slide, .hero {
+    height: calc( 100vh - 40px );
+  }
+  .menu > li {
+    display: block;
+  }
+}
+
+li.one {
+  background-image: url('/assets/img/slide-01.jpg');
+}
+li.two, .hero {
+  background-image: url('/assets/img/slide-02.jpg');
+}
+li.three {
+  background-image: url('/assets/img/slide-03.jpg');
+}
+// Typography
+hr {
+  width: 85%;
+  color: $mid-blue;
+  display: none;
+}
+.center {
+  text-align: center;
+}
+h1, h2, h3, h4, h5, h6, p, a, li, li a, p a, button, label, form {
+  font-family: 'Lato', sans-serif;
+  color: $dark-blue;
+}
+p, form label {
+  text-align: left;
+}
+h1 {
+  // font-size: 2.5rem;
+}
+h1, h2, h1.about {
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+h1 {
+  font-weight: 300;
+}
+h1.about {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  margin-top: 2rem;
+}
+h1.about, h2 {
+  letter-spacing: 2px;
+}
+h2 {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+h3 {
+  margin-top: .5rem;
+}
+p {
+  font-family: 'Droid Sans';
+  color: $dark-blue;
+}
+button.button .large {
+  background-color: $dark-blue;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+// Home page
+.dan-photo {
+  margin-top: 2rem;
+  border-radius: 50%;
+  border: 3px solid $dark-blue;
+}
+.rev-left,
+.rev-center,
+.rev-right {
+  // background-color: $mid-blue;
+}
+// Icons
+.fa-bath:before,
+.fa-home:before,
+.fa-envelope-o:before {
+  font-size: 3.5rem;
+  color: $mid-blue;
+}
+.fa-envelope-o:before {
+  color: $dark-blue;
+}
+// Contact
+.row form input, form textarea {
+  background-color: $light-blue;
+  border-radius: 3px;
+  padding: 10px;
+  border: 1px solid #005bac;
+}
+input::-webkit-input-placeholder {
+  color: $dark-blue;
+}
+// Footer
+footer {
+  background-color: #003c6a;
+  border-top: 10px solid #001f37;
+  // border-top: 8px solid transparent;
+  padding: 10px;
+  // -webkit-border-image: url('/assets/img/corrugation.png') 1 repeat; /* Safari 3.1-5 */
+  // -o-border-image: url('/assets/img/corrugation.png') 1 repeat; /* Opera 11-12.1 */
+  // border-image: url('/assets/img/corrugation.png') 8 0 0 0 repeat;
+  h4, p {
+    color: white;
+  }
+}

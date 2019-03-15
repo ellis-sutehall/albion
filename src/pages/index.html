@@ -1,0 +1,109 @@
+{{> hero}}
+<div class="expanded" id="about" data-magellan-target="about">
+  <div class="row">
+    <div class="large-12 columns center">
+      <h1 class="about">About</h1>
+      <hr />
+      <!-- <img class="dan-photo" src="/assets/img/daniel-roberts.jpg" width="200" height="200" /> -->
+      <h1>Albion Painters &amp; Decorators</h1>
+      <hr />
+      <h2>What We Do</h2>
+      <p class="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur neque augue, semper vitae ultrices ac, placerat quis nunc. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin scelerisque ante magna. Nullam mollis ligula sed nunc ultrices cursus.</p>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="large-4 medium-6 small-12 columns center rev-left">
+      <i class="fa fa-bath" aria-hidden="true"></i>
+      <h3>Bathrooms</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur neque augue, semper vitae ultrices ac, placerat quis nunc. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin scelerisque ante magna. Nullam mollis ligula sed nunc ultrices cursus.</p>
+    </div>
+
+    <div class="large-4 medium-6 small-12 columns center rev-center">
+      <i class="fa fa-home" aria-hidden="true"></i>
+      <h3>Houses</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur neque augue, semper vitae ultrices ac, placerat quis nunc. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin scelerisque ante magna. Nullam mollis ligula sed nunc ultrices cursus.</p>
+    </div>
+
+    <div class="large-4 medium-12 small-12 columns center rev-right">
+      <i class="fa fa-home" aria-hidden="true"></i>
+      <h3>Flats</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur neque augue, semper vitae ultrices ac, placerat quis nunc. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin scelerisque ante magna. Nullam mollis ligula sed nunc ultrices cursus.</p>
+    </div>
+
+  </div>
+
+</div>
+<div class="expanded" id="contact" data-magellan-target="contact">
+  <div class="row">
+    <div class="large-12 columns center">
+      <div class="rev-center">
+        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        <h2 style="margin-top: 8px;">Contact Us</h2>
+      </div>
+      <!-- Contact Form -->
+        <form data-abide novalidate action="thank-you.php" method="post" enctype="multipart/form-data">
+          <!-- Hidden Div For Error Alerts -->
+          <div data-abide-error class="alert callout" style="display: none;">
+            <p><i class="fi-alert"></i>There are some errors in your form.</p>
+          </div>
+          <div class="row">
+            <!-- First Name -->
+            <div class="large-3 medium-6 columns">
+              <label>First Name*</label>
+              <input name="fname" type="text" placeholder="First Name" required />
+              <span class="form-error">
+                <p>This is a required field, please enter your first name.</p>
+              </span>
+              <!-- <p class="help-text" id="exampleHelpText">Here's how you use this input field!</p> -->
+            </div>
+            <!-- Last Name -->
+            <div class="large-3 medium-6 columns">
+              <label>Last Name*</label>
+              <input name="lname" type="text" placeholder="Last Name" required />
+              <span class="form-error">
+                <p>This is a required field, please enter your last name.</p>
+              </span>
+            </div>
+            <!-- Email Address -->
+            <div class="large-3 medium-6 columns">
+              <label>Your Email Address</label>
+              <input name="email" type="text" placeholder="firstname.lastname@example.com" required />
+              <span class="form-error">
+                <p>This is a required field, please enter your email address.</p>
+              </span>
+            </div>
+            <!-- Phone Number -->
+            <div class="large-3 medium-6 columns">
+              <label>Your Phone Number</label>
+              <input name="phone" type="text" pattern="number" placeholder="07123456789" data-abide-ignore />
+            </div>
+          </div>
+          <!-- Email Subject -->
+          <div class="row">
+            <div class="large-6 medium-12 columns">
+              <label>Email Subject</label>
+              <input name="subject" type="text" placeholder="eg Four Bed House Needs Painting" required />
+              <span class="form-error">
+                <p>This is a required field, please enter a subject for your email.</p>
+              </span>
+            </div>
+          </div>
+          <!-- Message Area -->
+          <div style="text-align:left" class="row">
+            <div class="large-12 columns">
+              <label>Your Message</label>
+              <textarea name="message" rows="8" placeholder="Enter Your Message Here"></textarea>
+              <span class="form-error">
+                <p>This is a required field, please enter a message.</p>
+              </span>
+              <!-- Submit Button -->
+              <button id="send" class="button large" type="submit">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
