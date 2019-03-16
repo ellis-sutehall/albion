@@ -37,10 +37,6 @@ div#about {
     // margin: 0 0 2rem 0;
   }
 }
-// Thank You Page
-body .thank-you {
-  height: 100vh;
-}
 // Navigation
 .top-bar, .title-bar, .top-bar ul {
   background-color: #2c3840;
@@ -99,6 +95,17 @@ body .thank-you {
   }
 }
 // Orbit
+nav.orbit-bullets {
+  background: $mid-blue;
+  margin: 0;
+  padding: 2rem;
+  button {
+    background-color: $dark-blue;
+    &.is-active {
+      background-color: white;
+    }
+  }
+}
 li.orbit-slide, .hero {
   background-size: cover;
   height: calc( 100vh - 133px );

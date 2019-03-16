@@ -9,13 +9,17 @@
     <link rel="stylesheet" href="{{root}}assets/css/app.css">
   </head>
   <body>
-    {{#ifpage 'index'}}
-      {{> nav}}
+    {{> nav}}
+    {{#ifpage 'thank-you'}}
+      {{> body}}
     {{/ifpage}}
-    {{> body}}
     {{#ifpage 'index'}}
-      {{> footer}}
+      {{> hero}}
+      {{> body}}
+      {{> gallery}}
+      {{> contact}}
     {{/ifpage}}
+    {{> footer}}
     <script src="https://use.fontawesome.com/d7600fbee9.js"></script>
     <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
     <script src="{{root}}assets/js/app.js"></script>
