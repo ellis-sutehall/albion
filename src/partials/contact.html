@@ -1,12 +1,26 @@
 <div class="expanded" id="contact" data-magellan-target="contact">
   <div class="row">
-    <div class="large-12 columns center">
+    <div class="large-12 columns text-center">
       <div class="rev-center">
-        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        <i class="fas fa-envelope"></i>
         <h2 style="margin-top: 8px;">Contact Us</h2>
       </div>
+      <h4>Send us an email via the contact form below or phone us on either number.</h4>
 
-      <!-- Contact Form -->
+      <div class="row">
+        <div class="columns large-3 medium-6 phone-wrap">
+            <span><i class="fas fa-mobile-alt"></i></span>
+            <a class="button phone expanded" href="tel:01480473305">01480 473305</a>
+        </div>
+        <div class="columns large-3 medium-6 phone-wrap">
+            <span><i class="fas fa-mobile-alt"></i></span>
+            <a class="button phone expanded" href="tel: 01223524128"> 01223 524128</a>
+        </div>
+        <div class="columns large-6"></div>
+      </div>
+
+
+        <!-- Contact Form -->
         <form name="contact" method="POST" action="/thank-you.html" data-abide novalidate data-netlify="true">
           <!-- Hidden Div For Error Alerts -->
           <div data-abide-error class="alert callout" style="display: none;">
@@ -60,7 +74,7 @@
                 <p>This is a required field, please enter a message.</p>
               </span>
               <!-- Submit Button -->
-              <button id="send" class="button large" type="submit">Submit</button>
+              <button class="button large" type="submit">Send</button>
             </div>
           </div>
         </form>

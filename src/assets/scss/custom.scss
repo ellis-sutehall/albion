@@ -1,45 +1,6 @@
-html {
-  box-sizing: border-box;
-}
-div#contact {
-  padding: 2rem 0;
-  background-color: $mid-blue;
-}
-span.confirm {
-  display: none;
-}
-div#about {
-  min-height: 43.750em;
-  // padding: 0 0 2rem 0;
-  background-color: $light-blue;
-// background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2357b0ff' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
-}
-// Hero
-.hero-box {
-  margin-top: 6.250rem;
-  padding: .5rem;
-  // border: 2px solid $dark-blue;
-  // background-color: rgba(255, 255, 255, .5);
-  text-align: center;
-  .button {
-    // width: 70%;
-    margin-top: 2rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 3px;
-  }
-  img {
-    margin-bottom: 2rem;
-  }
-  h5 {
-    color: white;
-    font-size:1.4rem;
-    // margin: 0 0 2rem 0;
-  }
-}
 // Navigation
 .top-bar, .title-bar, .top-bar ul {
-  background-color: #2c3840;
+  background-color: $primary-blue;
   padding: 0;
 }
 .top-bar-right h6 {
@@ -88,19 +49,75 @@ div#about {
   background: white!important;
   box-shadow: 0 7px 0 #fefefe, 0 14px 0 #fefefe;
 }
-//  Tablet Nav Fix
-@media screen and (max-width: 63.9375em) {
-  ul.menu > li {
-    // display: table-cell;
+
+// Hero
+.hero {
+  background-image: url('/assets/img/albion-decorators-hero.jpg');
+}
+.hero-box {
+  margin-top: 6.250rem;
+  padding: .5rem;
+  .button {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 3px;
+  }
+  img {
+    margin-bottom: 2rem;
+  }
+  h5 {
+    color: white;
+    font-size:1.4rem;
+    // margin: 0 0 2rem 0;
+  }
+}
+
+
+#contact {
+  padding: 2rem 0;
+  background-color: $mid-blue;
+}
+span.confirm {
+  display: none;
+}
+#about {
+  padding: 4rem 0;
+  background-color: $light-blue;
+  i {
+    padding: 4rem 0 1rem 0;
+  }
+  h3 {
+    padding-bottom: 1rem;
+  }
+  h4 {
+    line-height: 2.6rem;
+  }
+  p {
+    line-height: 1.8rem;
+    font-size: 1rem;
+    padding: .5rem;
+    opacity: .8;
+  }
+}
+
+
+// Gallery
+#gallery {
+  padding: 4rem 0 0 0;
+  background-color: $primary-blue;
+  h2 {
+    color: white;
+    padding: 2rem 0;
   }
 }
 // Orbit
 nav.orbit-bullets {
-  background: $mid-blue;
+  // background: $mid-blue;
   margin: 0;
   padding: 2rem;
   button {
-    background-color: $dark-blue;
+    background-color: $mid-blue;
     &.is-active {
       background-color: white;
     }
@@ -115,36 +132,37 @@ li.orbit-slide, .hero {
     padding: 0.5rem;
   }
   li.orbit-slide, .hero {
-    height: calc( 100vh - 40px );
+    // height: calc( 100vh - 40px );
   }
   .menu > li {
     display: block;
   }
 }
 
-li.one {
-  background-image: url('/assets/img/slide-01.jpg');
-}
-li.two, .hero {
-  background-image: url('/assets/img/slide-02.jpg');
-}
-li.three {
-  background-image: url('/assets/img/slide-03.jpg');
-}
-// Typography
-hr {
-  width: 85%;
-  color: $mid-blue;
-  display: none;
-}
-.center {
-  text-align: center;
-}
+// li.one {
+//   background-image: url('/assets/img/albion-decorators-gallery-01.jpg');
+// }
+// li.two {
+//   background-image: url('/assets/img/albion-decorators-gallery-02.jpg');
+// }
+// li.three {
+//   background-image: url('/assets/img/albion-decorators-gallery-03.jpg');
+// }
+// li.four {
+//   background-image: url('/assets/img/albion-decorators-gallery-04.jpg');
+// }
+// li.five {
+//   background-image: url('/assets/img/albion-decorators-gallery-05.jpg');
+// }
+// li.six {
+//   background-image: url('/assets/img/albion-decorators-gallery-06.jpg');
+// }
+
 h1, h2, h3, h4, h5, h6, p, a, li, li a, p a, button, label, form {
   font-family: 'Lato', sans-serif;
-  color: $dark-blue;
+  color: $primary-blue;
 }
-p, form label {
+form label {
   text-align: left;
 }
 h1 {
@@ -175,10 +193,10 @@ h3 {
 }
 p {
   font-family: 'Droid Sans';
-  color: $dark-blue;
+  color: $primary-blue;
 }
 button.button .large {
-  background-color: $dark-blue;
+  background-color: $primary-blue;
   &:hover {
     opacity: 0.7;
   }
@@ -187,7 +205,7 @@ button.button .large {
 .dan-photo {
   margin-top: 2rem;
   border-radius: 50%;
-  border: 3px solid $dark-blue;
+  border: 3px solid $primary-blue;
 }
 .rev-left,
 .rev-center,
@@ -195,35 +213,100 @@ button.button .large {
   // background-color: $mid-blue;
 }
 // Icons
-.fa-bath:before,
+.fa-building:before,
 .fa-home:before,
-.fa-envelope-o:before {
+.fa-church:before,
+.fa-camera:before,
+.fa-envelope:before {
   font-size: 3.5rem;
   color: $mid-blue;
 }
-.fa-envelope-o:before {
-  color: $dark-blue;
+.fa-envelope:before {
+  color: $primary-blue;
 }
+.fa-camera:before {
+  color: white;
+}
+
 // Contact
-.row form input, form textarea {
-  background-color: $light-blue;
-  border-radius: 3px;
-  padding: 10px;
-  border: 1px solid #005bac;
+#contact {
+  padding: 4rem 0;
+  form {
+    input, textarea {
+      border-radius: 3px;
+      padding: 1.2rem;
+    }
+    input {
+      &::placeholder {
+        color: $primary-blue;
+        opacity: .8;
+      }
+    }
+    textarea {
+
+    }
+    .button {
+      background-color: $primary-blue;
+      color: white;
+      text-transform: uppercase;
+      font-size: 1rem;
+      padding: 1.5rem;
+      @include breakpoint(small only) {
+        width: 100%;
+      }
+    }
+  }
+  // Phone buttons
+  .phone-wrap {
+    display: flex;
+    padding-top: 1rem;
+    @include breakpoint(medium up) {
+      padding-top: 4rem;
+      padding-bottom: 2rem;
+    }
+    .button {
+      background-color: $primary-blue;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    span {
+      border:1px solid $primary-blue;
+      width: 40px;
+      height: 45px;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }
-input::-webkit-input-placeholder {
-  color: $dark-blue;
-}
+
+
 // Footer
 footer {
-  background-color: #003c6a;
-  border-top: 10px solid #001f37;
-  // border-top: 8px solid transparent;
-  padding: 10px;
-  // -webkit-border-image: url('/assets/img/corrugation.png') 1 repeat; /* Safari 3.1-5 */
-  // -o-border-image: url('/assets/img/corrugation.png') 1 repeat; /* Opera 11-12.1 */
-  // border-image: url('/assets/img/corrugation.png') 8 0 0 0 repeat;
+  background-color: $primary-blue;
+  padding: 4rem 0;
+  ul.menu {
+    a.active {
+      background-color: transparent;
+    }
+  }
   h4, p {
     color: white;
+  }
+  h4 {
+    padding-bottom: 2rem;
+  }
+  p {
+    line-height: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Lato';
+    letter-spacing: 2px;
+    font-size: 90%;
+  }
+  img {
+    padding-top: 2rem;
+    width: 200px;
   }
 }
