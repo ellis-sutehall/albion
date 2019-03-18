@@ -53,10 +53,17 @@
 // Hero
 .hero {
   background-image: url('/assets/img/albion-decorators-hero.jpg');
+  background-size: cover;
+  min-height: 100vh;
 }
 .hero-box {
-  margin-top: 6.250rem;
+  margin-top: 2rem;
   padding: .5rem;
+
+  @include breakpoint(medium up) {
+    margin-top: 6.250rem;
+  }
+
   .button {
     margin-top: 2rem;
     font-size: 1.2rem;
@@ -69,6 +76,14 @@
   h5 {
     color: white;
     font-size:1.4rem;
+    background-color: rgba(70, 169, 255, .4);
+    padding: 1rem;
+    border-radius: 3px;
+
+  @include breakpoint(medium up) {
+    padding: 3rem;
+  }
+
     // margin: 0 0 2rem 0;
   }
 }
@@ -108,55 +123,28 @@ span.confirm {
   background-color: $primary-blue;
   h2 {
     color: white;
-    padding: 2rem 0;
-  }
-}
-// Orbit
-nav.orbit-bullets {
-  // background: $mid-blue;
-  margin: 0;
-  padding: 2rem;
-  button {
-    background-color: $mid-blue;
-    &.is-active {
-      background-color: white;
-    }
-  }
-}
-li.orbit-slide, .hero {
-  background-size: cover;
-  height: calc( 100vh - 133px );
-}
-@include breakpoint( medium down ) {
-  .title-bar {
-    padding: 0.5rem;
-  }
-  li.orbit-slide, .hero {
-    // height: calc( 100vh - 40px );
-  }
-  .menu > li {
-    display: block;
+    padding: 1rem 0;
   }
 }
 
-// li.one {
-//   background-image: url('/assets/img/albion-decorators-gallery-01.jpg');
-// }
-// li.two {
-//   background-image: url('/assets/img/albion-decorators-gallery-02.jpg');
-// }
-// li.three {
-//   background-image: url('/assets/img/albion-decorators-gallery-03.jpg');
-// }
-// li.four {
-//   background-image: url('/assets/img/albion-decorators-gallery-04.jpg');
-// }
-// li.five {
-//   background-image: url('/assets/img/albion-decorators-gallery-05.jpg');
-// }
-// li.six {
-//   background-image: url('/assets/img/albion-decorators-gallery-06.jpg');
-// }
+.slick-dots {
+  color: white;
+  // padding: 2rem 0;
+  li, button {
+    border-radius: 50%;
+  }
+  li {
+    background: white;
+    &.slick-active {
+      background: $mid-blue;
+    }
+    button {
+      &::before {
+        content: "";
+      }
+    }
+  }
+}
 
 h1, h2, h3, h4, h5, h6, p, a, li, li a, p a, button, label, form {
   font-family: 'Lato', sans-serif;
@@ -164,6 +152,7 @@ h1, h2, h3, h4, h5, h6, p, a, li, li a, p a, button, label, form {
 }
 form label {
   text-align: left;
+  font-size: 1rem;
 }
 h1 {
   // font-size: 2.5rem;
@@ -260,6 +249,7 @@ button.button .large {
   .phone-wrap {
     display: flex;
     padding-top: 1rem;
+    border-radius: 3px;
     @include breakpoint(medium up) {
       padding-top: 4rem;
       padding-bottom: 2rem;
@@ -267,10 +257,14 @@ button.button .large {
     .button {
       background-color: $primary-blue;
       font-weight: bold;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
       font-size: 1rem;
     }
     span {
-      border:1px solid $primary-blue;
+      border: 1px solid $primary-blue;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
       width: 40px;
       height: 45px;
       background: white;
@@ -287,6 +281,9 @@ footer {
   background-color: $primary-blue;
   padding: 4rem 0;
   ul.menu {
+    a {
+      padding-left: 0;
+    }
     a.active {
       background-color: transparent;
     }
