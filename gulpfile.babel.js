@@ -45,6 +45,12 @@ function copy() {
     .pipe(gulp.dest(PATHS.dist + '/assets'));
 }
 
+// Copy redirects file from src to dist for netlify
+function copy() {
+  return gulp.src('src/_redirects')
+    .pipe(gulp.dest(PATHS.dist));
+}
+
 // Copy page templates into finished HTML files
 function pages() {
   return gulp.src('src/pages/**/*.{html,hbs,handlebars}')
