@@ -3,6 +3,11 @@
   background-color: $primary-blue;
   padding: 0;
 }
+.title-bar {
+  @include breakpoint(medium down) {
+    height: 3rem;
+  }
+}
 .top-bar-right h6 {
   color: white;
   letter-spacing: 2px;
@@ -30,6 +35,9 @@
     background-color: $mid-blue;
   }
   li {
+    @include breakpoint(medium down) {
+      display: block;
+    }
     a {
       color: #fff;
       font-weight: bold;
@@ -41,6 +49,9 @@
       }
     }
   }
+}
+.title-bar .menu-icon {
+  margin: 1rem 0 0 1rem;
 }
 .menu-icon::after {
   background: white!important;
@@ -174,7 +185,11 @@ h1.about, h2 {
   letter-spacing: 2px;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
+
+  @include breakpoint(medium up) {
+    font-size: 2rem;
+  }
   text-transform: capitalize;
 }
 h3 {
@@ -210,6 +225,11 @@ button.button .large {
   font-size: 3.5rem;
   color: $mid-blue;
 }
+
+.fa-envelope:before, .fa-camera:before {
+  font-size: 2rem;
+}
+
 .fa-envelope:before {
   color: $primary-blue;
 }
@@ -283,6 +303,10 @@ footer {
   ul.menu {
     a {
       padding-left: 0;
+      @include breakpoint(small only) {
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
     a.active {
       background-color: transparent;
@@ -293,6 +317,9 @@ footer {
   }
   h4 {
     padding-bottom: 2rem;
+    @include breakpoint(small only) {
+      padding-top: 2rem;
+    }
   }
   p {
     line-height: 1rem;
